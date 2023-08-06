@@ -1,0 +1,15 @@
+$salmon : #FF6060;
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    nav a {
+        text-decoration: none;
+        margin-left: 40px;
+        color: $salmon;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,15 +1,30 @@
+// Addons Nécessaires
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import "./index.css";
+// Pages Importées
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
+import About from "./pages/About/About";
+// Composant importés
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import reportWebVitals from "./reportWebVitals";
+// Import du style
+import "./index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <Header />
+        <Router>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/About" element={<About />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+        </Router>
     </React.StrictMode>
 );
 
