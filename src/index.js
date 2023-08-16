@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Pages Importées
 import Home from "./pages/Home/Home";
+import Details from "./pages/Details/Details";
 import NotFound from "./pages/NotFound/NotFound";
 import About from "./pages/About/About";
 // Composant importés
@@ -20,6 +21,7 @@ root.render(
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/Details" element={<Details />} />
                 <Route path="/About" element={<About />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>

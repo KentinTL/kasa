@@ -1,0 +1,40 @@
+$radius : 10px;
+$card_width: 340px;
+$card_height: 340px;
+#cardList a {
+    align-items: center;
+    color: #FFFFFF;
+    display: flex;
+    height: $card_height;
+    justify-content: center;
+    margin: 25px;
+    text-decoration: none;
+    transition: 0.5s;
+    width: $card_width;
+    .cardContent {
+        align-items: center;
+        border-radius: $radius;
+        background: linear-gradient(#ff6161, #e66a6a, #dc6666, #e66a6a, #813131);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: $card_width;
+        height: $card_height;
+        img {
+            background-color: #FFFFFF;
+            border-radius: $radius;
+            width: 200px;
+            height: 200px;
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+            max-width: 280px;
+            text-align: left;
+        }
+    }
+}
+#cardList a:hover {
+    transform: scale(1.02);
+    transition: 0.5s;
+}

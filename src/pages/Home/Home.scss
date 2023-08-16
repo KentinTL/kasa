@@ -1,0 +1,32 @@
+$radius: 10px;
+
+#homeContent {
+    #homeTitle {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.40), 
+            rgba(0, 0, 0, 0.40)
+            ), url(../../assets/bg_title_home.png);
+        background-repeat: no-repeat;
+        background-position: left;
+
+        border-radius: $radius;
+        padding: 50px 0;
+        margin: 63px auto 43px auto;
+        h1 {
+            color: #FFFFFF;
+            font-size: 40px;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+    #cardList {
+        align-items: center;
+        background-color: #f6f6f6;
+        border-radius: $radius;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+}

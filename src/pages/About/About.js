@@ -1,7 +1,12 @@
 import React from "react";
 
 function About() {
-    return <h1>JE suis Apropos</h1>;
+    return (
+        <section id="aboutContent">
+            <div id="aboutImg"></div>
+            <div id="aboutText"></div>
+        </section>
+    );
 }
 
 export default About;
