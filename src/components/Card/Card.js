@@ -5,11 +5,11 @@ import "./Card.scss";
 function Card() {
     const cardDetails = datas.map((data) => {
         return (
-            <Link id={data.id} key={data.id} to="/Details">
-                <div className="cardContent">
-                    <img src="" alt="" />
-                    <h2>{data.title}</h2>
-                </div>
+            <Link id={data.id} key={data.id} to="/Details/">
+                <figure className="cardContent">
+                    <img src={data.cover} alt="Présentation" />
+                    <figcaption>{data.title}</figcaption>
+                </figure>
             </Link>
         );
     });
