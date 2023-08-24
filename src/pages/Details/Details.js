@@ -1,21 +1,47 @@
 import { useParams } from "react-router-dom";
 import datas from "../../datas/appartement.json";
 import Collapse from "../../components/Collapse/Collapse";
+import Carousel from "../../components/Carousel/Carousel";
+import Name from "../../components/Name/Name";
+import Location from "../../components/Location/Location";
+import Tag from "../../components/Tag/Tag";
+import HosterName from "../../components/HosterName/HosterName";
+import HosterPicture from "../../components/HosterPicture/HosterPicture";
+import Notation from "../../components/Notation/Notation";
+import Equipments from "../../components/Equipments/Equipments";
 
 function Details() {
     const { id } = useParams();
 
     const appart = datas.find((appart) => appart.id === id);
     return (
-        <div>
-            <h2>{appart.title}</h2>
-            <Collapse label="Description">
-                <p>{appart.description}</p>
-            </Collapse>
-            <Collapse label="Équipements">
-                <p>{appart.equipments}</p>
-            </Collapse>
-        </div>
+        <section className="detailsContainer">
+            <div className="carouselContainer">
+                <Carousel pictures={appart.pictures} />
+            </div>
+            <div className="basicInfos">
+                <div className="leftBasicInfos">
+                    <Name name={appart.title} />
+                    <Location location={appart.location} />
+                    <Tag />
+                </div>
+                <div className="rightBasicInfos">
+                    <div className="hosterInfos">
+                        <HosterName hostName={appart.host.name} />
+                        <HosterPicture src={appart.host.picture} />
+                    </div>
+                    <Notation rating={appart.rating} />
+                </div>
+            </div>
+            <div className="collapseGlobal">
+                <Collapse label="Description">
+                    <p>{appart.description}</p>
+                </Collapse>
+                <Collapse label="Équipements">
+                    <Equipments />
+                </Collapse>
+            </div>
+        </section>
     );
 }
 

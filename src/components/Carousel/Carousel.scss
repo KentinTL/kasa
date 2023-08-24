@@ -1,0 +1,113 @@
+$salmon : #FF6060;
+$radius : 25px;
+$white : #FFFFFF;
+
+.carousel {
+    position: relative;
+    margin: 20px auto 30px auto;
+    .prev {
+        position: absolute;
+        left: 40px;
+        top: 212px;
+        .prevTop, .prevBottom {
+            background-color: $white;
+        height: 5px;
+        position: relative;
+        width: 40px;
+        }
+        .prevTop:hover, .prevBottom:hover {
+            cursor: pointer;
+        }
+        .prevTop {
+            transform: rotate(135deg);
+            bottom: 10px;
+        }
+        .prevBottom {
+            transform: rotate(-135deg);
+            top: 10px;
+        }
+    }
+    img {
+        border-radius: $radius;
+        max-height: 415px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .next {
+        position: absolute;
+        right: 40px;
+        top: 212px;
+        .nextTop, .nextBottom {
+            background-color: $white;
+            height: 5px;
+            position: relative;
+            width: 40px;
+        }
+        .nextTop:hover, .nextBottom:hover {
+            cursor: pointer;
+        }
+        .nextTop {
+            transform: rotate(45deg);
+            bottom: 10px;
+        }
+        .nextBottom {
+            transform: rotate(-45deg);
+            top: 10px;
+        }
+    }
+    .next:hover {
+        cursor: pointer;
+    }
+}
+
+// Mediaquerys 
+@media screen and (max-width:991px) {
+    .carousel {
+        img {
+            max-height: 325px;
+        }
+        .prev, .next {
+            top: 162px;
+        }
+        .prev {
+            left: 20px;
+        }
+        .next {
+            right: 20px;
+        }
+    }
+}
+@media screen and (max-width:650px) {
+    .carousel {
+        img {
+            max-height: 290px;
+        }
+        .prev, .next {
+            top: 145px;
+        }
+        .prev {
+            left: 15px;
+        }
+        .next {
+            right: 15px;
+        }
+    }
+}
+@media screen and (max-width:425px) {
+    .carousel {
+        img {
+            max-height: 255px;
+        }
+        .prev, .next {
+            top: 127px;
+        }
+        .prev {
+            left: 10px;
+            width: 20px;
+        }
+        .next {
+            right: 40px;
+            width: 20px;
+        }
+    }
+}
