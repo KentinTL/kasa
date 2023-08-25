@@ -43,27 +43,62 @@ $deskWidth : 1023px;
     #aboutContent {
         #aboutText {
             .collapseContainer {
-                width: 500px;
+                width: 600px;
+                .childrenShow {
+                    height: 140px;
+                }
+            }
+        }   
+    }
+}
+
+@media screen and (max-width:650px) {
+    #aboutContent {
+        #aboutText {
+            .collapseContainer {
+                width: 525px;
+                .childrenShow {
+                    height: 160px;
+                }
             }
         }   
     }
 }
 
 @media screen and (max-width:575px) {
+    #aboutContent {
+        #aboutText {
+            .collapseContainer {
+                width: 400px;
+                .childrenShow {
+                    height: 190px;
+                }
+            }
+        }   
+    }
+}
+
+@media screen and (max-width:425px) {
     #aboutContent {
         #aboutText {
             .collapseContainer {
                 width: 335px;
+                .childrenShow {
+                    height: 230px;
+                }
             }
         }   
     }
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width:375px) {
     #aboutContent {
         #aboutText {
             .collapseContainer {
                 width: 300px;
+                .childrenShow {
+                    height: 265px;
+                }
             }
         }   
     }

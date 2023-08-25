@@ -5,4 +5,8 @@ $salmon : #FF6060;
     max-width: 1240px;
     margin: 0 auto;
     color: $salmon;
+    h1,h2,h3,p {
+        margin: 0;
+        padding: 0;
+    }
 }

@@ -29,7 +29,7 @@ $white : #FFFFFF;
     }
     img {
         border-radius: $radius;
-        max-height: 415px;
+        height: 415px;
         object-fit: cover;
         width: 100%;
     }
@@ -64,7 +64,7 @@ $white : #FFFFFF;
 @media screen and (max-width:991px) {
     .carousel {
         img {
-            max-height: 325px;
+            height: 325px;
         }
         .prev, .next {
             top: 162px;
@@ -80,7 +80,7 @@ $white : #FFFFFF;
 @media screen and (max-width:650px) {
     .carousel {
         img {
-            max-height: 290px;
+            height: 290px;
         }
         .prev, .next {
             top: 145px;
@@ -96,7 +96,7 @@ $white : #FFFFFF;
 @media screen and (max-width:425px) {
     .carousel {
         img {
-            max-height: 255px;
+            height: 255px;
         }
         .prev, .next {
             top: 127px;

@@ -1,7 +1,8 @@
 import React from "react";
+import "./Location.scss";
 
 function Location(props) {
-    return <p>{props.location}</p>;
+    return <p className="detailsLocation">{props.location}</p>;
 }
 
 export default Location;

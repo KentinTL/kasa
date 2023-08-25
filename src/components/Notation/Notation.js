@@ -1,11 +1,14 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import "./Notation.scss";
 
 function Notation({ rating }) {
     const filledStars = parseInt(rating);
     const emptyStars = 5 - filledStars;
 
-    const filledStarIcon = "★"; // Utilise l'icône d'étoile remplie
-    const emptyStarIcon = "☆"; // Utilise l'icône d'étoile vide
+    const filledStarIcon = <FontAwesomeIcon icon={faStar} />; // Utilise l'icône d'étoile remplie
+    const emptyStarIcon = <FontAwesomeIcon icon={faStar} />; // Utilise l'icône d'étoile vide
 
     return (
         <div className="notation">

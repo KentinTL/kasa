@@ -1,4 +1,5 @@
 import React from "react";
+import "./HosterPicture.scss";
 
 function HosterName(props) {
     return (

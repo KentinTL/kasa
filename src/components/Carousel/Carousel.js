@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Carousel.scss";
-
+// Initialisation du Component Carousel
 function Carousel({ pictures }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -18,7 +18,9 @@ function Carousel({ pictures }) {
 
     return (
         <div className="carousel">
+            {/* Conditions si Tableau de pictures est supérieur a 1 alors on affiche notre navigateur */}
             {pictures.length > 1 && (
+                // On fait appel a la fonction goToPrevious
                 <div className="prev" onClick={goToPrevious}>
                     <div className="prevTop"></div>
                     <div className="prevBottom"></div>
@@ -28,7 +30,9 @@ function Carousel({ pictures }) {
                 src={pictures[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
             />
+            {/* Conditions si Tableau de pictures est supérieur a 1 alors on affiche notre navigateur */}
             {pictures.length > 1 && (
+                // On fait appel a la fonction goToNext
                 <div className="next" onClick={goToNext}>
                     <div className="nextTop"></div>
                     <div className="nextBottom"></div>
