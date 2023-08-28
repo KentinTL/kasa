@@ -33,6 +33,15 @@ $white : #FFFFFF;
         object-fit: cover;
         width: 100%;
     }
+    .positionIndicator {
+        bottom: 50px;
+        color: $white;
+        font-weight: 500;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        width: 50px;
+    }
     .next {
         position: absolute;
         right: 40px;
@@ -74,6 +83,9 @@ $white : #FFFFFF;
         }
         .next {
             right: 20px;
+        }
+        .positionIndicator {
+            bottom: 35px;
         }
     }
 }

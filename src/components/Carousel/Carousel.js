@@ -30,6 +30,9 @@ function Carousel({ pictures }) {
                 src={pictures[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
             />
+            <div className="positionIndicator">
+                {currentIndex + 1}/{pictures.length}
+            </div>
             {/* Conditions si Tableau de pictures est supérieur a 1 alors on affiche notre navigateur */}
             {pictures.length > 1 && (
                 // On fait appel a la fonction goToNext
